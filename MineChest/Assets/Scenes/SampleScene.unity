@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 1332508770}
   - component: {fileID: 1332508772}
   - component: {fileID: 1332508771}
+  - component: {fileID: 1332508773}
   m_Layer: 0
   m_Name: Tilemap_Base
   m_TagString: Untagged
@@ -98835,6 +98836,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1332508773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332508769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad6c50a67211c34d960d2d5a4c49a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 3428680682830478955, guid: 44bdd218895527841891e0f62ee05153, type: 3}
 --- !u!1 &1376377246
 GameObject:
   m_ObjectHideFlags: 0
