@@ -10,11 +10,8 @@ public class SpawnChest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Spawns randomly everytime game starts
-        for (int i = 0; i < 10; i++)
-        {
-            Spawn();
-        }
+    //Spawns randomly everytime game starts once       
+    Spawn();
     }
 
     // Update is called once per frame
