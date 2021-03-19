@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1337805072853494612}
   - component: {fileID: 1337805072853494610}
   - component: {fileID: 1337805072853494613}
-  - component: {fileID: 1337805072853494611}
   m_Layer: 0
   m_Name: Tilemap_Base
   m_TagString: Untagged
@@ -112265,19 +112264,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &1337805072853494611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337805072853494615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad6c50a67211c34d960d2d5a4c49a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chest: {fileID: 3428680682830478955, guid: 44bdd218895527841891e0f62ee05153, type: 3}
 --- !u!1 &1337805073910830007
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class SpawnChest : MonoBehaviour
 {
     [SerializeField]
     private GameObject chest;
+    [SerializeField]
+    private SpriteRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,9 @@ public class SpawnChest : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(chest, new Vector3(Random.Range(-50f, 50f), Random.Range(-35f,35f), 0f), Quaternion.identity);
+        Vector3 chestLoacation = new Vector3(Random.Range(-50f, 50f), Random.Range(-35f, 35f), 0f);
+        chest.transform.position = chestLoacation;
+        renderer.enabled = false;
+        //Instantiate(chest, new Vector3(Random.Range(-50f, 50f), Random.Range(-35f,35f), 0f), Quaternion.identity);
     }
 }
