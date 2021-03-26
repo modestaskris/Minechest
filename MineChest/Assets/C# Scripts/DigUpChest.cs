@@ -10,13 +10,25 @@ public class DigUpChest : MonoBehaviour
     private BoxCollider2D chest;
     [SerializeField]
     private BoxCollider2D player;
+    [SerializeField]
+    private Animator animator;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (player.bounds.Intersects(chest.bounds))
+        
+        if (Input.GetKey("f"))
         {
-            renderer.enabled = true;
+            animator.SetBool("dig", true);
+            if (player.bounds.Intersects(chest.bounds))
+            {
+                renderer.enabled = true;
+            }
         }
+        else
+        {
+            animator.SetBool("dig", false);
+        }
+
     }
 }
