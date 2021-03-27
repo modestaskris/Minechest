@@ -8,7 +8,8 @@ public class SpawnChest : MonoBehaviour
     private GameObject chest;
     [SerializeField]
     private SpriteRenderer renderer;
-    
+
+    public bool isOpened = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,10 @@ public class SpawnChest : MonoBehaviour
     void Update()
     {
         
-        if (false) // if chest is digged, it trigers spawn
+        if (isOpened) // if chest is digged, it trigers spawn
         {
             Spawn(); // reikia kad sukurtu nauja objekta
+            isOpened = false;
         }
         
     }

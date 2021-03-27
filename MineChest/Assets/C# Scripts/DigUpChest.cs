@@ -13,6 +13,7 @@ public class DigUpChest : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -25,6 +26,11 @@ public class DigUpChest : MonoBehaviour
                 renderer.enabled = true;
             }
         }
+        else if (Input.GetKey("g")) // to open chest
+        {
+            GameObject.Find("Chest").GetComponent<SpawnChest>().isOpened = true;
+        }
+
         else
         {
             animator.SetBool("dig", false);
