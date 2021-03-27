@@ -26,7 +26,7 @@ public class DigUpChest : MonoBehaviour
                 renderer.enabled = true;
             }
         }
-        else if (Input.GetKey("g")) // to open chest
+        else if (Input.GetKey("g") && renderer.enabled) // to open chest
         {
             GameObject.Find("Chest").GetComponent<SpawnChest>().isOpened = true;
         }
