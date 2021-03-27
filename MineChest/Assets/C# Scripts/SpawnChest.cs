@@ -13,20 +13,19 @@ public class SpawnChest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         //Spawns randomly everytime game starts once       
         Spawn();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (renderer.enabled) // if chest is digged, it trigers spawn
+        
+        if (false) // if chest is digged, it trigers spawn
         {
-            renderer.enabled = false;
-            Spawn();
+            Spawn(); // reikia kad sukurtu nauja objekta
         }
+        
     }
     /*
     void Spawn() // blogos koordinates
@@ -37,11 +36,10 @@ public class SpawnChest : MonoBehaviour
         //Instantiate(chest, new Vector3(Random.Range(-50f, 50f), Random.Range(-35f,35f), 0f), Quaternion.identity);
     }
     */
+
     void Spawn()
     {
-        // reikia delay bent 10sec        
-        // galbut galima automatizuoti kad spawnintu tarp kazkokiu map boundaries, tarp kuriu zaidejas gali vaikscioti
-        int area = Random.Range(0, 12); // viso 12 skirtingu plotu
+        int area = Random.Range(0, 12); // viso 12 skirtingu plotu, jei reikes plotu foto pavaizduotu zemelapy, imesiu
         if(area == 0) 
         {
             Vector3 chestLoacation = new Vector3(Random.Range(-60, -32), Random.Range(45, 50), 0f);
