@@ -26,7 +26,7 @@ public class DigUpChest : MonoBehaviour
                 renderer.enabled = true;
             }
         }
-        else if (Input.GetKey("g") && renderer.enabled) // to open chest
+        else if (Input.GetKey("g") && renderer.enabled && player.bounds.Intersects(chest.bounds)) // to open chest, possible only if player intersects chest bounds, press g and chest is digged
         {
             GameObject.Find("Chest").GetComponent<SpawnChest>().isOpened = true;
         }
