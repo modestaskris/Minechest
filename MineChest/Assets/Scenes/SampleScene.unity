@@ -1150,12 +1150,6 @@ MonoBehaviour:
   chest: {fileID: 972949316}
   renderer: {fileID: 972949320}
   isOpened: 0
---- !u!61 &972949319 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3428680682830478952, guid: 44bdd218895527841891e0f62ee05153,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258005786}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &972949320 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3428680682830478953, guid: 44bdd218895527841891e0f62ee05153,
@@ -1401,15 +1395,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1443078891023898014, guid: 44bdd218895527841891e0f62ee05153,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b85fe2112fc0c2d43b2962a016119f93, type: 2}
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.9
+      value: 67.9
       objectReference: {fileID: 0}
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
@@ -1688,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5527d897c5ca44ba93dd5f40fdf634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 10
 --- !u!50 &1376377249
 Rigidbody2D:
   serializedVersion: 4
@@ -1762,10 +1761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d0ac59a4b0b58449156ff3be966e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 972949320}
-  chest: {fileID: 972949319}
-  player: {fileID: 1376377251}
-  animator: {fileID: 1376377253}
 --- !u!95 &1376377253
 Animator:
   serializedVersion: 3
