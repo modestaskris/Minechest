@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class Collection : MonoBehaviour
 {
-    #region Singlton:Collection
-    public static Collection Instance;
-    void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
-    #endregion
+    //#region Singlton:Collection
+    //public static Collection Instance;
+    //void Awake()
+    //{
+    //    if (Instance == null)
+    //        Instance = this;
+    //    else
+    //        Destroy(gameObject);
+    //}
+    //#endregion
 
 
     //GameObject g;
@@ -31,6 +31,7 @@ public class Collection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Shop.Instance.collectablesList[1].Collected = true;
         GetAvailableCollectables();
     }
 
