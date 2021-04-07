@@ -45,6 +45,7 @@ public class Shop : MonoBehaviour
     void Start()
     {
         Shop.Instance.collectablesList[1].Collected = true;
+        Shop.Instance.collectablesList[0].Collected = true;
     }
 
     //// Update is called once per frame

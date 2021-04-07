@@ -23,6 +23,7 @@ public class Game : MonoBehaviour
     }
 
     #endregion
+
     // Start is called before the first frame update
     void Start()
     {
