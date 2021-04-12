@@ -1224,6 +1224,21 @@ MonoBehaviour:
   chest: {fileID: 972949316}
   renderer: {fileID: 972949320}
   isOpened: 0
+--- !u!114 &972949318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972949316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdd54c9708d46046bdd77c4ff4a9a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootfromChest: 0
+  minCurrencyGained: 1
+  maxCurrencyGained: 20
 --- !u!212 &972949320 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3428680682830478953, guid: 44bdd218895527841891e0f62ee05153,

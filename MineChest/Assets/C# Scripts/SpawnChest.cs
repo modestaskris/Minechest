@@ -12,7 +12,7 @@ public class SpawnChest : MonoBehaviour
     public bool isOpened = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Spawns randomly everytime game starts once       
         Spawn();
