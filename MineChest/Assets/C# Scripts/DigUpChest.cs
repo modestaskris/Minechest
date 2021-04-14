@@ -8,6 +8,7 @@ public class DigUpChest : MonoBehaviour
     private BoxCollider2D chestColider;
     private BoxCollider2D playerColider;
     private Animator playerAnimator;
+    private GameObject player;
     private Animator chestAnimator;
     private bool moveChest = false;
 
@@ -15,6 +16,7 @@ public class DigUpChest : MonoBehaviour
     {
         playerColider = GetComponent<BoxCollider2D>();
         playerAnimator = GetComponent<Animator>();
+        player = GameObject.Find("Player");
 
         chestRenderer = GameObject.Find("Chest").GetComponent<SpriteRenderer>();
         chestColider = GameObject.Find("Chest").GetComponent<BoxCollider2D>();
@@ -33,12 +35,14 @@ public class DigUpChest : MonoBehaviour
 
         if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("1") && chestAnimator.GetBool("IsOpen"))
         {
+            player.GetComponent<PlayerMovement>().enabled = false;
             chestAnimator.SetBool("IsOpen", false);
             moveChest = true;
         }
 
         if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("2") && moveChest)
         {
+            player.GetComponent<PlayerMovement>().enabled = true;
             GameObject.Find("Chest").GetComponent<SpawnChest>().isOpened = true;
             moveChest = false;
         }
