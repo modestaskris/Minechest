@@ -13,13 +13,23 @@ MonoBehaviour:
   m_Name: ClothingItemShopDatabase 1
   m_EditorClassIdentifier: 
   items:
-  - image: {fileID: 21300000, guid: 3572a465c5393c940952bc40cef82d8f, type: 3}
-    name: Item1c
+  - image: {fileID: 21300000, guid: bc6ad99627153584aaebf8a8e2bd84bc, type: 3}
+    name: "Pirato kepur\u0117"
+    price: 200
+    type: 1
+    isPurchased: 0
+  - image: {fileID: 21300000, guid: 9f5f014f13900b34f9d19b7cede09c6d, type: 3}
+    name: "Skarel\u0117"
     price: 500
     type: 1
     isPurchased: 0
-  - image: {fileID: 21300000, guid: f616c5248b0f9cc4190a960e0abc3e3e, type: 3}
-    name: Item2c
-    price: 600
-    type: 0
+  - image: {fileID: 21300000, guid: 90b46a5157c28b144bace08524f2b1e3, type: 3}
+    name: "Mu\u0161k. kepur\u0117"
+    price: 3000
+    type: 1
+    isPurchased: 0
+  - image: {fileID: 21300000, guid: a9e4227cca324014186849bdd7ef8e88, type: 3}
+    name: Perukas
+    price: 9999
+    type: 1
     isPurchased: 0
