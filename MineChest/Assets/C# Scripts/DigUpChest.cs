@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
+//[System.Serializable]
 public class DigUpChest : MonoBehaviour
 {
     private SpriteRenderer chestRenderer;
@@ -51,10 +53,6 @@ public class DigUpChest : MonoBehaviour
             chestColider.enabled = false;
             moveChest = false;
         }
-
-
-
-
     }
 
     void DigChest()
@@ -67,10 +65,17 @@ public class DigUpChest : MonoBehaviour
                 chestRenderer.enabled = true;
                 chestColider.enabled = true;
             }
+            //if (AudioScript.isPlaying)
+            //{
+                AudioScript.PlaySound("audioGarsas");
+              //  AudioScript.setBoolFalse();
+            //}
         }
         else
         {
             playerAnimator.SetBool("dig", false);
+            //AudioScript.setBoolTrue();
         }
     }
+
 }

@@ -44,25 +44,25 @@ public class SpawnChest : MonoBehaviour
         int area = Random.Range(0, 12); // viso 12 skirtingu plotu, jei reikes plotu foto pavaizduotu zemelapy, imesiu
         if(area == 0) 
         {
-            Vector3 chestLoacation = new Vector3(Random.Range(-60, -32), Random.Range(45, 50), 0f);
+            Vector3 chestLoacation = new Vector3(Random.Range(-51, -32), Random.Range(45, 50), 0f);
             chest.transform.position = chestLoacation;
             renderer.enabled = false;
         }
         else if (area == 1)
         {
-            Vector3 chestLoacation = new Vector3(Random.Range(-58, -43), Random.Range(7, 43), 0f);
+            Vector3 chestLoacation = new Vector3(Random.Range(-51, -43), Random.Range(7, 43), 0f);
             chest.transform.position = chestLoacation;
             renderer.enabled = false;
         }
         else if (area == 2)
         {
-            Vector3 chestLoacation = new Vector3(Random.Range(-74, -50), Random.Range(0, 9), 0f);
+            Vector3 chestLoacation = new Vector3(Random.Range(-51, -50), Random.Range(0, 9), 0f);
             chest.transform.position = chestLoacation;
             renderer.enabled = false;
         }
         else if (area == 3)
         {
-            Vector3 chestLoacation = new Vector3(Random.Range(-67, -60), Random.Range(11, 17), 0f);
+            Vector3 chestLoacation = new Vector3(Random.Range(-51, -60), Random.Range(11, 17), 0f);
             chest.transform.position = chestLoacation;
             renderer.enabled = false;
         }
