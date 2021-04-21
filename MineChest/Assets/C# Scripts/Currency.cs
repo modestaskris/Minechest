@@ -17,6 +17,7 @@ public class Currency : MonoBehaviour
 
     private GameObject loot;
     private SpriteRenderer lootRenderer;
+    private Animator lootAnimator;
 
     private GameObject lootPopup;
     private TextMeshPro lootPopupTextMesh;
@@ -28,8 +29,10 @@ public class Currency : MonoBehaviour
         chestX = chest.transform.position.x;
         chestY = chest.transform.position.y;
 
+
+        lootRenderer = GetComponent<SpriteRenderer>();
+        lootAnimator = GetComponent<Animator>();
         loot = GameObject.Find("Loot");
-        lootRenderer = loot.GetComponent<SpriteRenderer>();
 
         lootPopup = GameObject.Find("LootPopup");
         lootPopupTextMesh = lootPopup.GetComponent<TextMeshPro>();
@@ -38,7 +41,8 @@ public class Currency : MonoBehaviour
         lootRenderer.enabled = false;
         lootPopupTextMesh.text = "";
         lootPopup.transform.position = new Vector3(chest.transform.position.x-0.2f, chest.transform.position.y + 1.5f, chest.transform.position.z);
-        loot.transform.position = new Vector3(chest.transform.position.x-0.2f, chest.transform.position.y + 2, chest.transform.position.z);
+        loot.transform.position = new Vector3(chest.transform.position.x-0.1f, chest.transform.position.y + 2, chest.transform.position.z);
+        lootAnimator.SetBool("IsShowing", false);
     }
 
     // Update is called once per frame
@@ -53,15 +57,17 @@ public class Currency : MonoBehaviour
             chestY = chest.transform.position.y;
 
             lootRenderer.enabled = false;
-            loot.transform.position = new Vector3(chest.transform.position.x-0.2f, chest.transform.position.y + 2, chest.transform.position.z);
+            loot.transform.position = new Vector3(chest.transform.position.x-0.1f, chest.transform.position.y + 2, chest.transform.position.z);
             lootPopupTextMesh.text = "";
             lootPopup.transform.position = new Vector3(chest.transform.position.x-0.2f, chest.transform.position.y + 1.5f, chest.transform.position.z);
+            lootAnimator.SetBool("IsShowing", false);
         }
 
         if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("1"))
         {
             lootRenderer.enabled = true;
             lootPopupTextMesh.text = lootfromChest.ToString();
+            lootAnimator.SetBool("IsShowing", true);
         }
     }
 
