@@ -93,7 +93,7 @@ MonoBehaviour:
   itemImage: {fileID: 6365887085880544077}
   itemNameText: {fileID: 9107775665172461692}
   itemPriceText: {fileID: 7185599684747003479}
-  itemPurchaseButton: {fileID: 5566114615835704664}
+  itemButton: {fileID: 5566114615835704664}
   purchasedText: {fileID: 2149258763005330422}
 --- !u!1 &1886110094256556926
 GameObject:

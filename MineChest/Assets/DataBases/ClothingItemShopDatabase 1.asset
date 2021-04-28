@@ -17,12 +17,12 @@ MonoBehaviour:
     name: "Pirato kepur\u0117"
     price: 200
     type: 1
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 9f5f014f13900b34f9d19b7cede09c6d, type: 3}
     name: "Skarel\u0117"
     price: 500
     type: 1
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 90b46a5157c28b144bace08524f2b1e3, type: 3}
     name: "Mu\u0161k. kepur\u0117"
     price: 3000

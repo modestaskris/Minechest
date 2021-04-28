@@ -10,7 +10,7 @@ public class ItemUI : MonoBehaviour
     [SerializeField] Image itemImage;
     [SerializeField] TMP_Text itemNameText;
     [SerializeField] TMP_Text itemPriceText;
-    [SerializeField] Button itemPurchaseButton;
+    [SerializeField] Button itemButton;
     [SerializeField] TMP_Text purchasedText;
 
     //--------------------------------------------------------------
@@ -36,13 +36,18 @@ public class ItemUI : MonoBehaviour
 
     public void SetItemAsPurchased()
     {
-        itemPurchaseButton.gameObject.SetActive(false);
+        itemButton.gameObject.SetActive(false);
         purchasedText.text = "Purchased";
     }
 
     public void OnItemPurchase(int itemIndex, UnityAction<int> action)
     {
-        itemPurchaseButton.onClick.RemoveAllListeners();
-        itemPurchaseButton.onClick.AddListener(() => action.Invoke(itemIndex));
+        itemButton.onClick.RemoveAllListeners();
+        itemButton.onClick.AddListener(() => action.Invoke(itemIndex));
+    }
+    public void OnItemEquip(int itemIndex, UnityAction<int> action)
+    {
+        itemButton.onClick.RemoveAllListeners();
+        itemButton.onClick.AddListener(() => action.Invoke(itemIndex));
     }
 }
