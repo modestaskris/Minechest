@@ -5,9 +5,11 @@ using UnityEngine;
 public class Minimap : MonoBehaviour
 {
     private Camera minimap;
+    private Animator chestAnimator;
     // Start is called before the first frame update
     void Start()
     {
+        chestAnimator = GameObject.Find("Chest").GetComponent<Animator>();
         minimap = GetComponent<Camera>();
         minimap.enabled = false;
     }
@@ -24,7 +26,14 @@ public class Minimap : MonoBehaviour
         else
         {
             minimap.enabled = false;
-            GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
+            if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("1"))
+            {
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+            }
+            else
+            {
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
+            }
         }
 
     }

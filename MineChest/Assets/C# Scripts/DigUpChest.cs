@@ -39,7 +39,6 @@ public class DigUpChest : MonoBehaviour
 
         if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("1") && chestAnimator.GetBool("IsOpen"))
         {
-            GameObject.Find("Minimap Camera").GetComponent<Minimap>().enabled = false;
             player.GetComponent<PlayerMovement>().enabled = false;
             chestAnimator.SetBool("IsOpen", false);
             moveChest = true;
@@ -47,7 +46,6 @@ public class DigUpChest : MonoBehaviour
 
         if (chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("2") && moveChest)
         {
-            GameObject.Find("Minimap Camera").GetComponent<Minimap>().enabled = true;
             player.GetComponent<PlayerMovement>().enabled = true;
             GameObject.Find("Chest").GetComponent<SpawnChest>().isOpened = true;
             chestColider.enabled = false;
