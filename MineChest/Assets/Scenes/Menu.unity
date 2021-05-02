@@ -4304,7 +4304,7 @@ GameObject:
   - component: {fileID: 869097191}
   - component: {fileID: 869097192}
   m_Layer: 5
-  m_Name: Clothing Content
+  m_Name: Chests Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7380,6 +7380,10 @@ MonoBehaviour:
   clothingPrefab: {fileID: 521352989970372215, guid: b32194a1ae142f44cb591d069cf98d65,
     type: 3}
   clothingDB: {fileID: 11400000, guid: 2786832f94f292f4dab96be68a4a04e3, type: 2}
+  ShopChestsContainer: {fileID: 869097191}
+  chestPrefab: {fileID: 4644090806715581800, guid: a13a3cfb04de14b468cd7c21c6521bc7,
+    type: 3}
+  chestsDB: {fileID: 11400000, guid: 9cba3a4ad290bdb4982761eb393f26ef, type: 2}
   shopUI: {fileID: 1612837196}
   NoCoinsAnim: {fileID: 660216846}
 --- !u!1 &1638588469

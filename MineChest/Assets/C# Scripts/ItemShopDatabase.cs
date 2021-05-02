@@ -20,3 +20,23 @@ public class ItemShopDatabase : ScriptableObject
         items[index].isPurchased = true;
     }
 }
+[CreateAssetMenu(fileName = "ItemShopDatabase", menuName = "Shopping/Chests shop database")]
+public class ChestShopDatabase : ScriptableObject
+{
+    public Chest[] chests;
+
+    public int ChestsCount
+    {
+        get { return chests.Length; }
+    }
+
+    public Chest GetChest(int index)
+    {
+        return chests[index];
+    }
+
+    //public void PurchaseItem(int index)
+    //{
+    //    chests[index].isPurchased = true;
+    //}
+}

@@ -21,6 +21,12 @@ public class ItemShopUI : MonoBehaviour
     [Space(20)]
     [SerializeField] ItemShopDatabase clothingDB;
 
+    [Header("chests UI elements")]
+    [SerializeField] Transform ShopChestsContainer;
+    [SerializeField] GameObject chestPrefab;
+    [Space(20)]
+    [SerializeField] ChestShopDatabase chestsDB;
+
     [Space(20)]
     [Header("Shop Events")]
     [SerializeField] GameObject shopUI;
@@ -111,6 +117,28 @@ public class ItemShopUI : MonoBehaviour
             }
 
         }
+        //Generate Chests
+        for (int i = 0; i < chestsDB.ChestsCount; i++)
+        {
+            //Create a Character and its corresponding UI element (uiItem)
+            Chest chest = chestsDB.GetChest(i);
+            ItemUI uiItem = Instantiate(toolPrefab, ShopChestsContainer).GetComponent<ItemUI>();
+
+            //Move item to its position
+            uiItem.SetItemPosition(Vector2.right * i * (itemWidth + itemSpacing));
+
+            //Set Item name in Hierarchy (Not required)
+            uiItem.gameObject.name = "Item" + i + "-" + chest.name;
+
+            //Add information to the UI (one item)
+            uiItem.SetItemName(chest.name);
+            uiItem.SetItemImage(chest.image);
+            uiItem.SetItemPrice(chest.price);
+
+                uiItem.OnItemPurchase(i, OnChestPurchased);
+
+
+        }
     }
     void OnToolPurchased(int index)
     {
@@ -173,6 +201,29 @@ public class ItemShopUI : MonoBehaviour
         }
     }
 
+    void OnChestPurchased(int index)
+    {
+        Chest chest = chestsDB.GetChest(index);
+        ItemUI uiItem = GetChestUI(index);
+
+        if (GameDataManager.CanSpendCoins(chest.price))
+        {
+            //Proceed with the purchase operation
+            GameDataManager.SpendCoins(chest.price);
+
+            //Update Coins UI text
+            GameSharedUI.Instance.UpdateCoinsUIText();
+
+            //Add purchased item to Shop Data
+            //GameDataManager.AddPurchasedTool(index);
+
+        }
+        else
+        {
+            //No enough coins..
+            NoCoinsAnim.SetTrigger("NoCoins");
+        }
+    }
     ItemUI GetToolUI(int index)
     {
         return ShopToolsContainer.GetChild(index+1).GetComponent<ItemUI>();
@@ -181,8 +232,12 @@ public class ItemShopUI : MonoBehaviour
     {
         return ShopClothingContainer.GetChild(index+1).GetComponent<ItemUI>();
     }
+    ItemUI GetChestUI(int index)
+    {
+        return ShopChestsContainer.GetChild(index + 1).GetComponent<ItemUI>();
+    }
 
-    
+
 
 
 
