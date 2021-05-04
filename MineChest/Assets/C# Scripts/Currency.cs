@@ -21,6 +21,8 @@ public class Currency : MonoBehaviour
 
     private GameObject lootPopup;
     private TextMeshPro lootPopupTextMesh;
+
+    private bool addCoins = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,13 @@ public class Currency : MonoBehaviour
             lootRenderer.enabled = true;
             lootPopupTextMesh.text = lootfromChest.ToString();
             lootAnimator.SetBool("IsShowing", true);
+            addCoins = true;
+        }
+
+        if (addCoins && !chestAnimator.GetCurrentAnimatorStateInfo(0).IsTag("1"))
+        {
+            GameDataManager.AddCoins(lootfromChest);
+            addCoins = false;
         }
     }
 

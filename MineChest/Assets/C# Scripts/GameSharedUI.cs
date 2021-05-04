@@ -26,6 +26,11 @@ public class GameSharedUI : MonoBehaviour
         UpdateCoinsUIText();
     }
 
+    private void Update()
+    {
+        UpdateCoinsUIText();
+    }
+
     public void UpdateCoinsUIText()
     {
         for (int i = 0; i < coinsUIText.Length; i++)
