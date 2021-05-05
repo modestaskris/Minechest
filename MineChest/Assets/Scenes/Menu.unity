@@ -7877,7 +7877,7 @@ MonoBehaviour:
   ShopChestsContainer: {fileID: 869097191}
   chestPrefab: {fileID: 4644090806715581800, guid: a13a3cfb04de14b468cd7c21c6521bc7,
     type: 3}
-  chestsDB: {fileID: 11400000, guid: 9cba3a4ad290bdb4982761eb393f26ef, type: 2}
+  chestsDB: {fileID: 11400000, guid: f170445e32d2c824392d840491a88e23, type: 2}
   shopUI: {fileID: 1612837196}
   NoCoinsAnim: {fileID: 660216846}
 --- !u!1 &1638588469
