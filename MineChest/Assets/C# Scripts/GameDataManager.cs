@@ -16,17 +16,24 @@ public class ClothingItemShopData
 {
     public List<int> purchasedClothingsIndexes = new List<int>();
 }
+[System.Serializable]
+public class CollectableItemShopData
+{
+    public List<int> collectedCollectableIndexes = new List<int>();
+}
 
 public static class GameDataManager
 {
     static PlayerData playerData = new PlayerData();
     static ToolItemShopData toolItemShopData = new ToolItemShopData();
     static ClothingItemShopData clothingItemShopData = new ClothingItemShopData();
+    static CollectableItemShopData collectableItemShopData = new CollectableItemShopData();
     static GameDataManager()
     {
         LoadPlayerData();
         LoadToolsShopData();
         LoadClothingsShopData();
+        LoadCollectablesData();
     }
 
     public static int GetCoins()
@@ -115,5 +122,33 @@ public static class GameDataManager
     {
         BinarySerializer.Save(clothingItemShopData, "clothings-shop-data.txt");
         UnityEngine.Debug.Log("<color=magenta>[ClothingsShopData] Saved.</color>");
+    }
+
+    //CollectablesDataMethods
+    public static void AddCollectedCollectable(int collectableIndex)
+    {
+        collectableItemShopData.collectedCollectableIndexes.Add(collectableIndex);
+        SaveCollectablesData();
+    }
+
+    public static List<int> GetAllCollectedCollectables()
+    {
+        return collectableItemShopData.collectedCollectableIndexes;
+    }
+
+    public static int GetCollectedCollectable(int index)
+    {
+        return collectableItemShopData.collectedCollectableIndexes[index];
+    }
+    static void LoadCollectablesData()
+    {
+        collectableItemShopData = BinarySerializer.Load<CollectableItemShopData>("collectables-data.txt");
+        UnityEngine.Debug.Log("<color=green>[CollectablesData] Loaded.</color>");
+    }
+
+    static void SaveCollectablesData()
+    {
+        BinarySerializer.Save(collectableItemShopData, "collectables-data.txt");
+        UnityEngine.Debug.Log("<color=magenta>[CollectablesData] Saved.</color>");
     }
 }

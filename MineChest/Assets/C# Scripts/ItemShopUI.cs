@@ -28,6 +28,10 @@ public class ItemShopUI : MonoBehaviour
     [SerializeField] ChestShopDatabase chestsDB;
 
     [Space(20)]
+    [Header("collectables elements")]
+    [SerializeField] CollectablesDatabase collectablesDB; 
+
+    [Space(20)]
     [Header("Shop Events")]
     [SerializeField] GameObject shopUI;
     [SerializeField] Animator NoCoinsAnim;
@@ -54,6 +58,11 @@ public class ItemShopUI : MonoBehaviour
         {
             int purchasedClothingIndex = GameDataManager.GetPurchasedClothing(i);
             clothingDB.PurchaseItem(purchasedClothingIndex);
+        }
+        for (int i = 0; i < GameDataManager.GetAllCollectedCollectables().Count; i++)
+        {
+            int collectedCollectableIndex = GameDataManager.GetCollectedCollectable(i);
+            collectablesDB.CollectCollectable(collectedCollectableIndex);
         }
 
 
