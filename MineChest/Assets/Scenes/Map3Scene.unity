@@ -1314,12 +1314,12 @@ PrefabInstance:
     - target: {fileID: 5448770762757379848, guid: c9ac4cecccd540442ad9e9273681c017,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.845
+      value: -11.83
       objectReference: {fileID: 0}
     - target: {fileID: 5448770762757379848, guid: c9ac4cecccd540442ad9e9273681c017,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.517
+      value: 9.53
       objectReference: {fileID: 0}
     - target: {fileID: 5448770762757379848, guid: c9ac4cecccd540442ad9e9273681c017,
         type: 3}
@@ -1366,6 +1366,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5448770762757379850, guid: c9ac4cecccd540442ad9e9273681c017,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5448770762757379892, guid: c9ac4cecccd540442ad9e9273681c017,
         type: 3}
       propertyPath: m_Name
@@ -1407,21 +1412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chestTriger: {fileID: 1069663197}
---- !u!114 &1069663196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069663193}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7955953da17a6d64f84556b0f3ff50dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chest: {fileID: 1069663193}
-  renderer: {fileID: 1069663200}
-  isOpened: 0
 --- !u!61 &1069663197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1631,12 +1621,12 @@ PrefabInstance:
     - target: {fileID: 906495411474308932, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 906495411474308932, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 1443078891023898014, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
@@ -1651,12 +1641,12 @@ PrefabInstance:
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101
+      value: -21.81
       objectReference: {fileID: 0}
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: 9.04
       objectReference: {fileID: 0}
     - target: {fileID: 3428680682396690225, guid: 44bdd218895527841891e0f62ee05153,
         type: 3}

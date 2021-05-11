@@ -23,14 +23,30 @@ public class SpawnChest : MonoBehaviour
         {
             SpawnMap1();
         }
+        else if(currentScene.name == "Map2Scene")
+        {
+            SpawnMap2();
+        }
+        else if(currentScene.name == "Map3Scene")
+        {
+            SpawnMap3();
+        }
+        /*
         else
         {
             if (currentScene.name == "Map2Scene")
             {
                 SpawnMap2();
             }
+            else
+            {
+                if(currentScene.name == "Map3Scene")
+                {
+                    SpawnMap3();
+                }
+            }
         }
-
+        */
     }
 
     // Update is called once per frame
@@ -44,6 +60,17 @@ public class SpawnChest : MonoBehaviour
                 SpawnMap1();
                 isOpened = false;
             }
+            else if(currentScene.name == "Map2Scene")
+            {
+                SpawnMap2();
+                isOpened = false;
+            }
+            else if(currentScene.name == "Map3Scene")
+            {
+                SpawnMap3();
+                isOpened = false;
+            }
+            /*
             else
             {
                 if (currentScene.name == "Map2Scene")
@@ -51,7 +78,16 @@ public class SpawnChest : MonoBehaviour
                     SpawnMap2();
                     isOpened = false;
                 }
+                else
+                {
+                    if(currentScene.name == "Map3Scene")
+                    {
+                        SpawnMap3();
+                        isOpened = false;
+                    }
+                }
             }
+            */
 
         }
 
@@ -205,6 +241,94 @@ public class SpawnChest : MonoBehaviour
         else if (area == 9)
         {
             Vector3 chestLoacation = new Vector3(Random.Range(-45.6f, -42f), Random.Range(-3.3f, 5f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+    }
+
+
+
+    //Trecio zemelapio atsiradimo vietos
+    void SpawnMap3()
+    {
+        int area = Random.Range(0, 13); // viso 10 skirtingu plotu, jei reikes plotu foto pavaizduotu zemelapy, imesiu
+
+        if (area == 0) //1 t.t.
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(-20f, -14f), Random.Range(-3.7f, 14f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 1)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(-17f, -10f), Random.Range(-11f, -4f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+
+        else if (area == 2)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(-10f, 10f), Random.Range(13f, 20f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 3)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(-10f, 11f), Random.Range(14.5f, 18.5f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 4)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(14f, 19f), Random.Range(6.4f, 15.7f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 5) // 6
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(22f, 28f), Random.Range(-7.5f, -2f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 6) // 7
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(31f, 66f), Random.Range(-12.5f, -7f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 12) // 6 antra dalis xd
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(22f, 27f), Random.Range(-16f, -11.6f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 7)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(62f, 72f), Random.Range(-15.5f, -9f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 8)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(19f, 25f), Random.Range(-37f, -23.5f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 9)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(26f, 32f), Random.Range(-48f, -40f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 10)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(43f, 57f), Random.Range(-56f, -48f), 0f);
+            chest.transform.position = chestLoacation;
+            renderer.enabled = false;
+        }
+        else if (area == 11)
+        {
+            Vector3 chestLoacation = new Vector3(Random.Range(73f, 80f), Random.Range(-37f, -23.2f), 0f);
             chest.transform.position = chestLoacation;
             renderer.enabled = false;
         }
