@@ -47,6 +47,17 @@ public class InventoryUI : MonoBehaviour
     }
     void GenerateInventoryItemsUI()
     {
+        //Loop throw save purchased items and make them as purchased in the Database array
+        for (int i = 0; i < GameDataManager.GetAllPurchasedTools().Count; i++)
+        {
+            int purchasedToolIndex = GameDataManager.GetPurchasedTool(i);
+            toolDB.PurchaseItem(purchasedToolIndex);
+        }
+        for (int i = 0; i < GameDataManager.GetAllPurchasedClothings().Count; i++)
+        {
+            int purchasedClothingIndex = GameDataManager.GetPurchasedClothing(i);
+            clothingDB.PurchaseItem(purchasedClothingIndex);
+        }
         int toolsCount = 0;
         int clothingCount = 0;
         
