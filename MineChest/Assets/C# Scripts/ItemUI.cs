@@ -23,6 +23,10 @@ public class ItemUI : MonoBehaviour
     {
         itemImage.sprite = sprite;
     }
+    public Sprite GetItemImage()
+    {
+        return itemImage.sprite;
+    }
 
     public void SetItemName(string name)
     {

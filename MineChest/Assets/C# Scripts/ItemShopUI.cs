@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class ItemShopUI : MonoBehaviour
 {
@@ -225,7 +226,116 @@ public class ItemShopUI : MonoBehaviour
 
             //Add purchased item to Shop Data
             //GameDataManager.AddPurchasedTool(index);
-
+            randomNumber = Random.Range(0, total);
+            if(chest.name == "Map 1 Chest 1")
+            {
+                int coinIndex = 1;
+                foreach(var weight in table1)
+                {
+                    if(randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex-1);
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
+            if (chest.name == "Map 1 Chest 2")
+            {
+                int coinIndex = 1;
+                foreach (var weight in table2)
+                {
+                    if (randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex - 1);
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
+            if (chest.name == "Map 2 Chest 1")
+            {
+                int coinIndex = 4;
+                foreach (var weight in table1)
+                {
+                    if (randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex - 1);
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
+            if (chest.name == "Map 2 Chest 2")
+            {
+                int coinIndex = 4;
+                foreach (var weight in table2)
+                {
+                    if (randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex - 1);
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
+            if (chest.name == "Map 3 Chest 1")
+            {
+                int coinIndex = 7;
+                foreach (var weight in table1)
+                {
+                    if (randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex - 1);
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
+            if (chest.name == "Map 3 Chest 2")
+            {
+                int coinIndex = 7;
+                foreach (var weight in table2)
+                {
+                    if (randomNumber <= weight)
+                    {
+                        //award item
+                        Debug.Log("Award: " + coinIndex);
+                        GameDataManager.AddCollectedCollectable(coinIndex - 1);
+                        
+                    }
+                    else
+                    {
+                        randomNumber -= weight;
+                        coinIndex++;
+                    }
+                }
+            }
         }
         else
         {
@@ -245,9 +355,20 @@ public class ItemShopUI : MonoBehaviour
     {
         return ShopChestsContainer.GetChild(index + 1).GetComponent<ItemUI>();
     }
-
-
-
+    public int[] table1 =
+    {
+        60,
+        30,
+        10
+    };
+    public int[] table2 =
+    {
+        20,
+        40,
+        40
+    };
+    public int total = 100;
+    public int randomNumber;
 
 
 }
