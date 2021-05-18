@@ -3202,6 +3202,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 1110721466}
   EquipedAnim: {fileID: 508912807}
   InventoryButton: {fileID: 692433899}
+  player: {fileID: 0}
 --- !u!1 &763982296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4966,6 +4967,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 1110721466}
   EquipedAnim: {fileID: 508912807}
   InventoryButton: {fileID: 692433899}
+  player: {fileID: 5448770762757379892, guid: c9ac4cecccd540442ad9e9273681c017, type: 3}
 --- !u!114 &1110721470
 MonoBehaviour:
   m_ObjectHideFlags: 0

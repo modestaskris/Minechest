@@ -27,6 +27,8 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Animator EquipedAnim;
     [Space(20)]
     [SerializeField] Button InventoryButton;
+
+    [SerializeField] GameObject player;
     void Start()
     {
 
@@ -82,7 +84,7 @@ public class InventoryUI : MonoBehaviour
             uiItem.SetItemName(item.name);
             uiItem.SetItemImage(item.image);
 
-            uiItem.OnItemEquip(i, OnToolEquip);
+            uiItem.OnItemEquip(i,OnToolEquip);
 
         }
         for (int i = 0; i < clothingDB.ItemsCount; i++)
@@ -105,18 +107,20 @@ public class InventoryUI : MonoBehaviour
             uiItem.SetItemName(item.name);
             uiItem.SetItemImage(item.image);
 
-            uiItem.OnItemEquip(i, OnClothingEquip);
+            uiItem.OnItemEquip(i,OnClothingEquip);
         }
     }
     void OnToolEquip(int index)
     {
-            //Equiped
-            EquipedAnim.SetTrigger("Equipped");
+        //Equiped
+        EquipedAnim.SetTrigger("Equipped");
+        player.GetComponent<Clothes>().toolName = toolDB.GetItem(index).name;
     }
     void OnClothingEquip(int index)
     {
         //Equiped
         EquipedAnim.SetTrigger("Equipped");
+        player.GetComponent<Clothes>().clothingName = clothingDB.GetItem(index).name;
     }
 
 
