@@ -26,7 +26,7 @@ MonoBehaviour:
     name: Map 2 Chest 2
     price: 1400
   - image: {fileID: 21300000, guid: 4c850969e9f721840b88af70a90af4d0, type: 3}
-    name: Map3 Chest 1
+    name: Map 3 Chest 1
     price: 1000
   - image: {fileID: 21300000, guid: 579c2571da6e9824d9980332d7466455, type: 3}
     name: Map 3 Chest 2

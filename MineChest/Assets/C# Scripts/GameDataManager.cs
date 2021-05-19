@@ -3,7 +3,7 @@
 [System.Serializable]
 public class PlayerData
 {
-    public int coins = 1000;
+    public int coins = 100000;
 }
 //Shop Data Holder
 [System.Serializable]
