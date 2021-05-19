@@ -17,7 +17,7 @@ MonoBehaviour:
     name: Kardas
     price: 300
     type: 0
-    isPurchased: 1
+    isPurchased: 0
   - image: {fileID: 21300000, guid: 8a78287f774e83b46ac69b29a1abdc4a, type: 3}
     name: Kirvis
     price: 500
@@ -27,7 +27,7 @@ MonoBehaviour:
     name: Deglas
     price: 1000
     type: 0
-    isPurchased: 1
+    isPurchased: 0
   - image: {fileID: 21300000, guid: 23d169ca8ebb30e429b15cb329c19789, type: 3}
     name: "\u0160paga"
     price: 2000
