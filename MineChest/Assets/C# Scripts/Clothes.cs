@@ -6,9 +6,9 @@ public class Clothes : MonoBehaviour
 {
     private Animator animator;
     public string toolName;
-    private static string tool;
+    private static string tool ="";
     public string clothingName;
-    private static string clothing;
+    private static string clothing = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,57 @@ public class Clothes : MonoBehaviour
 
         ChangeTool();
         ChangeClothes();
-        OutfitPicker();
+        if (clothing.Length != 0 && tool.Length != 0)
+        {
+            OutfitPicker();
+        }
+        if (clothing.Length == 0)
+        {
+            ToolPicker();
+        }
+        if (tool.Length == 0)
+        {
+            ClothesPicker();
+        }
+        
+    }
+
+    private void ToolPicker()
+    {
+        switch (tool)
+        {
+            case "Kardas":
+                animator.SetLayerWeight(1, 1);
+                break;
+            case "Kirvis":
+                animator.SetLayerWeight(2, 1);
+                break;
+            case "Špaga":
+                animator.SetLayerWeight(3, 1);
+                break;
+            case "Deglas":
+                animator.SetLayerWeight(4, 1);
+                break;
+        }
+    }
+
+    private void ClothesPicker()
+    {
+        switch (clothing)
+        {
+            case "Pirato kepurė":
+                animator.SetLayerWeight(1, 1);
+                break;
+            case "Mušk. kepurė":
+                animator.SetLayerWeight(5, 1);
+                break;
+            case "Skarelė":
+                animator.SetLayerWeight(9, 1);
+                break;
+            case "Perukas":
+                animator.SetLayerWeight(13, 1);
+                break;
+        }
     }
 
     private void OutfitPicker()
